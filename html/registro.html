@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <title>OYE</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <link rel="stylesheet" href="../css/custom_css.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="../css/bootstrap.min.css" />
+    <link rel="stylesheet" href="../css/custom.css">
+</head>
+
+<body class="bg-light text-white">
+    <header>
+    <!-- Acá comienza la barra de navegación -->
+    <nav class="navbar navbar-expand-sm navbar-dark bg-dark sticky-top">
+        <a class="navbar-brand" href="#"><img src="../logo.png" width="50px" alt="OYE" />
+            <h3 class="align-middle d-inline">OYE</h3>
+        </a>
+        <!-- botón hamburguesa -->
+        <button class="navbar-toggler d-lg-none" type="button" data-toggle="collapse" data-target="#barraNavegacion"
+            aria-controls="barraNavegacion" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <!-- lista de paginas -->
+        <div class="collapse navbar-collapse" id="barraNavegacion">
+            <ul class="navbar-nav mr-auto mt-2 mt-lg-0 mx-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="./index.html">Inicio</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="./canciones.html">Canciones</a>
+                </li>
+            </ul>
+
+            <!-- botones contacto, login, registro -->
+            <button data-toggle="modal" data-target="#modalContacto"
+                class="btn btn-outline-primary my-2 my-sm-0 mx-sm-1 d-block d-md-inline">
+                Contacto
+            </button> <br>
+            <a class="btn btn-primary my-2 my-sm-0 mx-sm-1" href="./iniciosesion.html">Login</a> <br>
+            <a class="btn btn-primary my-2 my-sm-0 mx-sm-1 active" href="./registro.html">Registro</a>
+ 
+        </div>
+    </nav>
+
+    <!-- aqui comienza la modal de contacto-->
+    <div class="modal" tabindex="-1" role="dialog" id="modalContacto">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content bg-dark">
+                <!--Encabezado de la modal de contacto-->
+                <div class="modal-header">
+                    <h4 class="modal-title text-primary">Contacto</h4>
+                    <button type="button" class="close" data-dismiss="modal">
+                        <span aria-hidden="true" class="text-white">&times;</span>
+                    </button>
+                </div>
+                <!--Cuerpo de la modal de contacto-->
+                <div class="modal-body">
+                    <p>infor&commat;oye.com</p>
+                    <p>+57 123 1231212</p>
+                </div>
+                <!--footer de la modal-->
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-outline-primary" data-dismiss="modal">Cerrar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    </header>
+
+
+
+    
+
+    <main>
+        <div class="container my-5 align-content-center">
+            <div class="row justify-content-center my-auto">
+                <h1 class="col-10 col-md-6">Registro</h1>
+            </div>
+            <!-- acá inicial el formulario -->
+            <form action="">
+                <div class="row justify-content-center px-0 ">
+                    <div class="form-group col-10 col-md-6">
+                        <label for="correo">Correo electrónico*</label>
+                        <input type="text" class="form-control" name="correo" id="correo" aria-describedby="helpId"
+                            placeholder="Correo electrónico">
+                        <span class="error" id="errorEmail"></span>
+                    </div>
+                </div>
+                <div class="row justify-content-center px-0">
+                    <div class="form-group col-10 col-md-6">
+                        <label for="contrasena">Contraseña*</label>
+                        <input type="password" class="form-control" name="contrasena" id="contrasena"
+                            placeholder="Contraseña">
+                        <span class="error" id="errorContrasena"></span>
+                        
+                    </div>
+                </div>
+                <div class="row justify-content-center px-0">
+                    <div class="form-group col-10 col-md-6">
+                        <label for="contrasena">Confirmación de contraseña*</label>
+                        <input type="password" class="form-control" name="confirmacion" id="confirmacion"
+                            placeholder="Confirme su contraseña">
+                        <span class="error" id="errorConfirmacion"></span>
+                        
+                    </div>
+                </div>
+                <div class="row justify-content-center px-0">
+                    <div class="form-group col-10 col-md-6">
+                        <label for="generoFav">Genero musical favorito*</label>
+                        <select name="generoFav" id="generoFav" class="form-control">
+                            <option value="" class="text-muted disabled" >Seleccione una opción</option>
+                            <option value="rock">Rock</option>
+                            <option value="balada">Balada</option>
+                            <option value="salsa">Salsa</option>
+                            <option value="otro">Otro</option>
+                        </select>
+                        <span class="error" id="errorGeneroFav"></span>
+                        
+                    </div>
+                </div>
+                <div class="row justify-content-center px-0">
+                    <div class="form-group col-10 col-md-6">
+                        <label for="edad">Edad*</label>
+                        <div class="form-check">
+                            <input type="radio" name="rangoEdad" id="menor20" value="menor20">
+                            <label for="menor20">Menor a 20 años</label>
+                        </div>
+                        <div class="form-check">
+                            <input type="radio" name="rangoEdad" id="menor40" value="menor40">
+                            <label for="menor40">Entre 20 y 40 años</label>
+                        </div>
+                        <div class="form-check">
+                            <input type="radio" name="rangoEdad" id="mayor40" value="mayor40">
+                            <label for="mayor40">Mayor a 40 años</label>
+                        </div>
+                        <span class="error" id="errorEdad"></span>
+                    </div>
+                </div>
+                <div class="row justify-content-center px-0">
+                    <div class="form-group col-10 col-md-6">
+                        <div class="form-check">
+                          <label class="form-check-label">
+                            <input type="checkbox" class="form-check-input" name="terminos" id="terminos">
+                            Acepto términos y condiciones*
+                          </label>
+                        </div>
+                        <span class="error" id="errorCondiciones"></span>
+                    </div>
+                </div>
+                
+                <div class="row justify-content-center px-0 ">
+                    <div class="col-10 col-md-6 ">
+                        <p class="text-primary">*Campos obligatorios</p>
+                        <input type="submit" value="Continuar" class="btn btn-primary" onclick="return validar(this.form)">
+                    </div>
+                    
+                </div>
+                
+            </form>
+        </div>
+    </main>
+
+
+    <!-- Pie de pagina  -->
+    <footer class="footer container-fluid mt-1 py-1 bg-dark text-white py-2">
+        <div class="row">
+            <div class="col-0 col-md-6 text-left d-none d-md-block">
+                Comparte la música
+            </div>
+            <div class="col-12 col-md-6 text-md-right text-center">
+                &copy Derechos reservados
+            </div>
+        </div>
+    </footer>
+
+    <!-- script validación-->
+    <script src="../scripts/validaciones.js"></script>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
