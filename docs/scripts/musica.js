@@ -8,7 +8,7 @@ $(document).ready(function () {
   //con la información del json se completan los atributos de cada etiqueta
 
   $.ajax({
-    url: "http://127.0.0.1:5500/audio/datos.json",
+    url: "./audio/datos.json",
     success: function (result) {
       for (var i in result.canciones) {
 
@@ -27,12 +27,12 @@ $(document).ready(function () {
         cardBody.appendChild(audio)
         divCol.setAttribute('class', "col-12 col-sm-6 col-lg-4 my-1 mx-0 song")
         card.setAttribute('class', 'card')
-        img.setAttribute('src', "../images/icon_" + result.canciones[i].icono + ".svg")
+        img.setAttribute('src', "./images/icon_" + result.canciones[i].icono + ".svg")
         img.setAttribute('class', "card-img-top w-25 mx-auto")
         cardBody.setAttribute('class', "card-body text-center bg-dark overflow-hidden")
         audio.setAttribute('controls', "true")
         audio.setAttribute("class","audio-width")
-        audio.setAttribute('src', "../audio/" + result.canciones[i].ruta)
+        audio.setAttribute('src', "./audio/" + result.canciones[i].ruta)
       }
     }
   });

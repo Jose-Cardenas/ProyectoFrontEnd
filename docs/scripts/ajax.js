@@ -2,7 +2,7 @@
 $(document).ready(function () {
 
     $.ajax({
-        url: "../audio/datos.json",
+        url: "./audio/datos.json",
         success: function (resultado) {
 
             var fila = document.getElementById("fila")
@@ -25,7 +25,7 @@ $(document).ready(function () {
 
                 var imagen = document.createElement("img")
                 imagen.setAttribute("class", "card-img-top w-25")
-                imagen.setAttribute("src", "../images/icon_" + resultado.canciones[i].icono + ".svg")
+                imagen.setAttribute("src", "./images/icon_" + resultado.canciones[i].icono + ".svg")
 
                 encabezadoCarta.appendChild(imagen)
 
@@ -41,7 +41,7 @@ $(document).ready(function () {
                 cuerpoCarta.appendChild(nombre)
 
                 var sonido = document.createElement("audio")
-                sonido.setAttribute("src", "../audio/" + resultado.canciones[i].ruta)
+                sonido.setAttribute("src", "./audio/" + resultado.canciones[i].ruta)
                 sonido.setAttribute("controls", "true")
 
                 cuerpoCarta.appendChild(sonido)

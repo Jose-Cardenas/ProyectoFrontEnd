@@ -8,7 +8,7 @@ $(document).ready(function () {
     //con la información del json se completan los atributos de cada etiqueta
   
     $.ajax({
-      url: "http://127.0.0.1:5500/audio/datos.json",
+      url: "./audio/datos.json",
       success: function (result) {
 
         function compare( a, b ) {
@@ -46,7 +46,7 @@ $(document).ready(function () {
           divCancion.setAttribute("class","col-12 col-md-9")
 
 
-          audio.setAttribute('src', "../audio/" + top[i].ruta)
+          audio.setAttribute('src', "./audio/" + top[i].ruta)
           audio.setAttribute('controls', "true")
         }
       }
